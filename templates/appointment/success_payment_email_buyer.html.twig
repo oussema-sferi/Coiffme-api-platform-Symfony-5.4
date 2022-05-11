@@ -1,0 +1,16 @@
+<div class="header-body text-center mb-7">
+    <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-6 col-md-8 px-5">
+            <img src="{{ asset('assets/img/coiffme.png') }}" style="width: 80px" alt="">
+        </div>
+    </div>
+</div>
+<h1>Reçu de transaction</h1>
+
+<p>Votre paiement a été effectué avec succès et votre réservation a été prise en compte.</p>
+<p>Ci-dessous les détails de votre paiement:</p>
+<p>Référence Transaction: {{ payment.payinId }}</p>
+<p>Montant: {{ payment.amount }} €</p>
+<p>Date: {{ payment.createdAt | format_datetime(locale='fr') }}</p>
+
+<p>Merci pour votre confiance. A bientôt!</p>

@@ -1,0 +1,19 @@
+<div class="header-body text-center mb-7">
+    <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-6 col-md-8 px-5">
+            <img src="{{ asset('assets/img/coiffme.png') }}" style="width: 80px" alt="">
+        </div>
+    </div>
+</div>
+<h1>Bonjour!</h1>
+
+<p>Pour réinitialiser votre mot de passe, veuillez cliquer sur ce lien:</p>
+
+<a href="{{ url('app_reset_password', {token: resetToken.token}) }}">Réinitialisation de votre mot de passe</a>
+
+
+<p>Ce lien va expirer dans {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
+
+{#<p>Ce lien va expirer dans 1 heure.</p>#}
+
+<p>A bientôt!</p>

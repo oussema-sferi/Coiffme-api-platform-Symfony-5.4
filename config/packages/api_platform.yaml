@@ -1,0 +1,36 @@
+api_platform:
+
+    title: 'Coiff Me REST API'
+
+    description: 'A Symfony API to manage Coiff Me'
+
+    version: '1.0.0'
+
+    show_webby: false
+
+    mapping:
+        paths: ['%kernel.project_dir%/src/Entity']
+
+    patch_formats:
+        json: ['application/merge-patch+json']
+        multipart: ['multipart/form-data']
+        
+    eager_loading:
+        max_joins: 100
+
+    swagger:
+        versions: [3]
+    formats:
+        json:
+            mime_types: [ 'application/json' ]
+        jsonld:
+            mime_types: ['application/ld+json']
+        html:
+            mime_types: [ 'text/html' ]
+
+    defaults:
+        pagination_enabled: false
+        # api_keys:
+        #     apiKey:
+        #         name: Authorization
+        #         type: header
